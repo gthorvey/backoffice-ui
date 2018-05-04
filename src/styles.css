@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+.container{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 18px/1 Arial, Helvetica, sans-serif;
+  /*background-color: #fffcd5;*/
+  background-color: azure;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
