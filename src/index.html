@@ -6,20 +6,54 @@
   <title>BackofficeUi</title>
 
   <link rel="stylesheet" href="styles.css">
-  <base href="/">
+  <!-- <base href="/"> -->
+
+ <!--  <link rel="stylesheet" type="text/css" href="../styles/dx.common.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/dx.light.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/dx.spa.css" /> -->
+
+  <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/17.2.7/css/dx.spa.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/17.2.7/css/dx.common.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/17.2.7/css/dx.light.css" />
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <link rel="stylesheet" href="/styles.css" type="text/html">
+  <link rel="stylesheet" href="node_modules/ng2f-bootstrap/dist/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
 
   <!-- Polyfill(s) for older browsers -->
+<!--   <script src="node_modules/core-js/client/shim.min.js"></script>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script> -->
+
+  <script src="https://jspm.io/system@0.16.js"></script>
+  
+  <script src="systemjs.config.js"></script>
+  <script>
+      System.import('app')
+          .then(function (viz) {
+            System.import("devextreme/viz/themes").then(function (viz) {
+              viz.currentTheme("generic.light");
+              viz.refreshTheme();
+            });
+          })
+          .catch(console.error.bind(console));
+
+  </script>
+
   <base href="/">
 
 </head>
 
+
 <body class="container">
-  <app-root></app-root>
+    <app-root></app-root>  
 </body>
 
 </html>

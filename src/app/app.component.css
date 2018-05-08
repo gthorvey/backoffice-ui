@@ -7,14 +7,14 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  border: 1px blue solid;
+  border: 0px blue solid;
   margin: 5px auto;
 }
 
 .file-explorer {
   width: 20%;
   height: 400px;
-  border: 1px red solid;
+  border: 0px red solid;
 }
 .main-content-container {
   width: 80%;
@@ -24,11 +24,12 @@
 .sub-header {
   height: 75px;
   width: 80%;
-  border: 1px red solid;
+  border: 0px red solid;
 }
 .main-content {
   height: 325px;
   width: 80%;
-  border: 1px green solid;
+  border: 0px green solid;
+  background-color: whitesmoke;
 }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TreeNode } from 'ng2-file-tree/ng2-file-tree';
 
 @Component({
   selector: 'app-root',
@@ -16,11 +15,8 @@ export class AppComponent implements OnInit {
     console.log(this.parentFolderLoc);
   }
 
-  clickFileTree(fileLoc: string): void {
-    console.log(fileLoc);
-
-    // Get full file path
-    console.log(fileLoc);
-    this.chosenFileLoc = fileLoc;
+  clickFileTree(fileLoc2: string): void {
+    console.log("From Inside Parent Component clickFileTree "+ fileLoc2);    
+    this.chosenFileLoc = fileLoc2;
   }
 }

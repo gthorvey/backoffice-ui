@@ -1,14 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div id="header">
-  <h1>Backoffice UI</h1>
+  <h1>Backoffice UI </h1>
 </div>
 <div id="flex-container">
-  <app-file-explorer [parentFolder]='parentFolderLoc'
-  (onChange)='clickFileTree($event)' class='file-explorer'>Loading..</app-file-explorer>
+  <app-file-explorer [parentFolder]='parentFolderLoc' (itemSelected)='clickFileTree($event)' class='file-explorer'>Loading..</app-file-explorer>
 
   <div class="main-content-container">
     <div class="sub-header">
-      <app-sub-header>Loading..</app-sub-header>
+      <app-sub-header [fileLoc2]='chosenFileLoc'>Loading..</app-sub-header>
     </div>
     <div class="main-content">
       <app-main-content [fileLoc]='chosenFileLoc'>Loading..</app-main-content>

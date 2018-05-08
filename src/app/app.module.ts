@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { DxTreeViewModule } from 'devextreme-angular';
 
 import { AppComponent } from './app.component';
 import { FileExplorerComponent } from './file-explorer/file-explorer.component';
@@ -17,9 +22,11 @@ import { Ng2FileTreeModule } from 'ng2-file-tree/ng2-file-tree';
     SubHeaderComponent
   ],
   imports: [
-    BrowserModule, Ng2FileTreeModule
+    BrowserModule, Ng2FileTreeModule, DxTreeViewModule, FormsModule,HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

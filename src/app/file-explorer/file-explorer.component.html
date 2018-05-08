@@ -1,4 +1,6 @@
-File Explorer
-<br/>
-{{parentFolder}}
-
+<hr/>
+<div class="form">
+    <dx-tree-view id="simple-treeview" [items]="products" dataStructure="plain"
+    parentIdExpr="catagoryId" keyExpr="id" displayExpr="name"
+        [width]="300" (onItemClick)="selectItem($event)"></dx-tree-view>
+</div>
