@@ -21,8 +21,9 @@
 
           </td>
           <td>
-            <select name="possibleValues" id="possibleValues">
-              <option *ngFor="let possibleValue of possibleValues" [value]="possibleValue.id"> {{possibleValue.selectableValue}}</option>
+            <select name="possibleValues" id="possibleValues" #selectedValue (change)="dmaParameter.value=selectedValue.value">
+              <option selected disabled>values</option>
+              <option *ngFor="let possibleValue of possibleValues" [value]="possibleValue.selectableValue"> {{possibleValue.selectableValue}}</option>
             </select>
           </td>
         </tr>

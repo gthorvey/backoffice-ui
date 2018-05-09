@@ -46,7 +46,6 @@ export class FileExplorerComponent implements OnInit, OnChanges {
               fullPath: prd.fullPath,
               catagoryId: prd.catagoryId
             };
-            console.log('Tree Item >> ' + JSON.stringify(treeItem));
             try {
               data.push(treeItem);
             } catch (e) {
