@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { FileExplorerComponent } from './file-explorer/file-explorer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { SubHeaderComponent } from './sub-header/sub-header.component';
+import { UserDirectoryComponent } from './user-directory/user-directory.component';
+
 
 import { BmaDataService } from './bmadata-service/bma-data-service';
 import { FileExplorerService } from './file-explorer/file-explorer.service';
@@ -20,7 +22,8 @@ import { FileExplorerService } from './file-explorer/file-explorer.service';
     AppComponent,
     FileExplorerComponent,
     MainContentComponent,
-    SubHeaderComponent
+    SubHeaderComponent,
+    UserDirectoryComponent
   ],
   imports: [
     BrowserModule, DxTreeViewModule, FormsModule, HttpModule

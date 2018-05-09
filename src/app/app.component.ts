@@ -7,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  parentFolderLoc = 'C:\codebase\poc\backoffice-ui';
-
   chosenFileLoc: string;
+
+  chosenDirLoc: string;
 
   ngOnInit() { }
 
   clickFileTree(fileLoc: string): void {
     this.chosenFileLoc = fileLoc;
+  }
+
+  clickDirTree(dirLoc: string): void {
+    this.chosenDirLoc = dirLoc;
   }
 }

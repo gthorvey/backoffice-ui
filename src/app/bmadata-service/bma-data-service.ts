@@ -13,7 +13,7 @@ export class BmaDataService {
 
   constructor(private _http: Http) { }
 
-  getData(fileLoc = 'C:/data/Door_v6/frame.json'): Observable<IBmaParameters[]> {
+  getData(fileLoc: string): Observable<IBmaParameters[]> {
     const parameters: IBmaParameters[] = [];
     // alert('check');
     return this._http.get(this.restFileUrl + fileLoc)

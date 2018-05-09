@@ -7,13 +7,12 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class FileExplorerService {
-
-  private _getDirUrl = 'http://localhost:8080/filesvc/getDirStructure?dir=C:/data/Door_v6/';
+  private _getDirUrl = 'http://10.77.21.111:8080/filesvc/getDirStructure?dir=';
 
   constructor(private _http: Http) { }
 
-  getProductsObservable(): Observable<any> {
-    return this._http.get(this._getDirUrl)
+  getProductsObservable(dirPath: string): Observable<any> {
+    return this._http.get(this._getDirUrl + dirPath)
       .map((response: Response) => response.json())
       .catch(this._serverError);
   }

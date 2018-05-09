@@ -3,8 +3,9 @@
 <div id="header">
   Backoffice UI
 </div>
+<user-directory (itemDirSelected)='clickDirTree($event)'></user-directory>
 <div id="flex-container">
-  <app-file-explorer [parentFolder]='parentFolderLoc' (itemSelected)='clickFileTree($event)' class='file-explorer'>Loading..</app-file-explorer>
+  <app-file-explorer [directorySelected]='chosenDirLoc' (itemSelected)='clickFileTree($event)' class='file-explorer'>Loading..</app-file-explorer>
 
   <div class="main-content-container">
     <div class="sub-header">

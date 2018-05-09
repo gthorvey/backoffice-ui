@@ -13,7 +13,7 @@ import { Angular2Csv } from 'angular2-csv/Angular2-csv';
 })
 export class MainContentComponent implements OnInit, OnChanges {
 
-  @Input() fileLoc = 'C:/data/Door_v6/frame.json';
+  @Input() fileLoc = '';
 
   bmaParameters: IBmaParameters[] = [];
 
@@ -39,7 +39,7 @@ export class MainContentComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     console.log(this.fileLoc);
-     if (this.fileLoc.indexOf('.') >= 0) {
+    if (this.fileLoc !== undefined && this.fileLoc.indexOf('.') >= 0) {
       this._bmaDataService.getData(this.fileLoc)
         .subscribe(bmaParams => {
           this.bmaParameters = bmaParams;
