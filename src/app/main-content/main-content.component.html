@@ -1,22 +1,46 @@
 <hr/>
-<br/>
-<table border="1" width = "80%">
-  <tr >
-    <th cellspace = 1 cellpadding=1>Parameter</th>
-    <th cellspace = 1 cellpadding=1>Thumbnail</th>
-    <th cellspace = 1 cellpadding=1>Default Value</th>
-    <th cellspace = 1 cellpadding=1>Possible Values</th>
-  </tr>
-  <tr>
-    <td>width</td>
-    <td></td>
-    <td>200</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>width</td>
-    <td></td>
-    <td>200</td>
-    <td>300</td>
-  </tr>
-</table>
+<div class="container">
+  <div class="row">
+    <form #backOfficeDataForm="ngForm" (ngSubmit)="onFormSubmit(backOfficeDataForm.value)">
+      <table class="table table-bordered ">
+        <tr>
+          <th class="col-md-3">Parameter</th>
+          <th class="col-md-3">Thumbnail</th>
+          <th class="col-md-3">Default Value</th>
+          <th class="col-md-3">Possible Values</th>
+        </tr>
+        <tr *ngFor="let dmaParameter of bmaParameters; let i=index;">
+          <td name="parameter" id="paramName_{{i}}">{{dmaParameter.name}}
+            <input type="hidden" name="dmaparameter_{{i}}" id="dmaparameter_{{i}}" [ngModel]="dmaParameter.name">
+          </td>
+
+          <td></td>
+          <td>
+            <input type="text" name="paramValue_{{i}}" id="paramValue_{{i}}" [ngModel]="dmaParameter.value">
+            <input type="hidden" name="defaultValue" id="defaultValue" value="{{dmaParameter.value}}">
+
+          </td>
+          <td>
+            <select name="possibleValues" id="possibleValues">
+              <option *ngFor="let possibleValue of possibleValues" [value]="possibleValue.id"> {{possibleValue.selectableValue}}</option>
+            </select>
+          </td>
+        </tr>
+
+      </table>
+      <br>
+
+      <div class="container">
+        <div class="row">
+          <button class="btn btn-primary" type="submit"> Export</button>
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+</div>
+<br>
+<!-- <div>
+  {{backOfficeDataForm.value | json}}
+</div> -->

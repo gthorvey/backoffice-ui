@@ -11,12 +11,9 @@ export class AppComponent implements OnInit {
 
   chosenFileLoc: string;
 
-  ngOnInit() {
-    console.log(this.parentFolderLoc);
-  }
+  ngOnInit() { }
 
-  clickFileTree(fileLoc2: string): void {
-    console.log("From Inside Parent Component clickFileTree "+ fileLoc2);    
-    this.chosenFileLoc = fileLoc2;
+  clickFileTree(fileLoc: string): void {
+    this.chosenFileLoc = fileLoc;
   }
 }

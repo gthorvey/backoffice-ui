@@ -1,5 +1,5 @@
 import { Component, Input, Output, OnInit, OnChanges, enableProdMode, EventEmitter } from '@angular/core';
-import { Service } from './file-explorer.service';
+import { FileExplorerService } from './file-explorer.service';
 
 if (!/localhost/.test(document.location.host)) {
   enableProdMode();
@@ -9,7 +9,7 @@ if (!/localhost/.test(document.location.host)) {
   selector: 'app-file-explorer',
   templateUrl: './file-explorer.component.html',
   styleUrls: ['./file-explorer.component.css'],
-  providers: [Service]
+  providers: [FileExplorerService]
 })
 export class FileExplorerComponent implements OnInit, OnChanges {
 
@@ -27,7 +27,7 @@ export class FileExplorerComponent implements OnInit, OnChanges {
 
   currentItem: any;
 
-  constructor(private _service: Service) { }
+  constructor(private _service: FileExplorerService) { }
 
   ngOnInit() {
     this._service.getProductsObservable()

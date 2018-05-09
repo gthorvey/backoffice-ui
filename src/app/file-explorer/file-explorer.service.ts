@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
-export class Service {
+export class FileExplorerService {
 
   private _getDirUrl = 'http://localhost:8080/filesvc/getDirStructure?dir=C:/data/Door_v6/';
 

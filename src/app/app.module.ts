@@ -12,7 +12,8 @@ import { FileExplorerComponent } from './file-explorer/file-explorer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { SubHeaderComponent } from './sub-header/sub-header.component';
 
-import { Ng2FileTreeModule } from 'ng2-file-tree/ng2-file-tree';
+import { BmaDataService } from './bmadata-service/bma-data-service';
+import { FileExplorerService } from './file-explorer/file-explorer.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,9 @@ import { Ng2FileTreeModule } from 'ng2-file-tree/ng2-file-tree';
     SubHeaderComponent
   ],
   imports: [
-    BrowserModule, Ng2FileTreeModule, DxTreeViewModule, FormsModule,HttpModule
+    BrowserModule, DxTreeViewModule, FormsModule, HttpModule
   ],
-  providers: [],
+  providers: [BmaDataService, FileExplorerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
