@@ -21,7 +21,7 @@ export class UserDirectoryComponent implements OnInit {
   }
 
   currentDirectory(directoryForm: NgForm): void {
-    this.dir = directoryForm.value.path;
+    this.dir = directoryForm.value.path.replace(/\\/g, '/');
     this.itemDirSelected.emit(this.dir);
   }
 
