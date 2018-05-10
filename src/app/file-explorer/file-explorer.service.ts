@@ -7,7 +7,7 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class FileExplorerService {
-  private _getDirUrl = 'http://10.77.21.111:8080/filesvc/getDirStructure?dir=';
+  private _getDirUrl = 'http://localhost:8080/filesvc/getDirStructure?dir=';
 
   constructor(private _http: Http) { }
 
