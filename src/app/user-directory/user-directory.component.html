@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>Input the Directory</h1>
   <form  #directoryForm="ngForm" (ngSubmit)="currentDirectory(directoryForm)">
     <div class="form-group  col-sm-4">
+        Enter a directory (e.g. C:/data/new)<br/>
       <!-- <input type="file" class="form-control" id="directory"
       required [(ngModel)]="model.path" name="path" multiple directory webkitdirectory mozdirectory> -->
       <input type="text" class="form-control" id="directory"
